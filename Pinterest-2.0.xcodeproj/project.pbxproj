@@ -8,20 +8,110 @@
 
 /* Begin PBXBuildFile section */
 		598C307F22C73698001F95A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C307E22C73698001F95A6 /* AppDelegate.swift */; };
-		598C308122C73698001F95A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C308022C73698001F95A6 /* ViewController.swift */; };
-		598C308422C73698001F95A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598C308222C73698001F95A6 /* Main.storyboard */; };
 		598C308622C73699001F95A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598C308522C73699001F95A6 /* Assets.xcassets */; };
 		598C308922C73699001F95A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598C308722C73699001F95A6 /* LaunchScreen.storyboard */; };
+		598C30E722C73891001F95A6 /* CSMTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30CE22C73891001F95A6 /* CSMTextView.swift */; };
+		598C30E822C73891001F95A6 /* CSMLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30CF22C73891001F95A6 /* CSMLocalAuthentication.swift */; };
+		598C30E922C73891001F95A6 /* CSMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D022C73891001F95A6 /* CSMLabel.swift */; };
+		598C30EA22C73891001F95A6 /* CSMDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D122C73891001F95A6 /* CSMDateManager.swift */; };
+		598C30EB22C73891001F95A6 /* CSMColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D222C73891001F95A6 /* CSMColorManager.swift */; };
+		598C30EC22C73891001F95A6 /* CSMNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D322C73891001F95A6 /* CSMNumber.swift */; };
+		598C30ED22C73891001F95A6 /* CSMKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D422C73891001F95A6 /* CSMKeyChain.swift */; };
+		598C30EE22C73891001F95A6 /* CSMLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D522C73891001F95A6 /* CSMLocalNotificationManager.swift */; };
+		598C30EF22C73891001F95A6 /* CSMSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D622C73891001F95A6 /* CSMSearchBar.swift */; };
+		598C30F022C73891001F95A6 /* CSMCustomStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D722C73891001F95A6 /* CSMCustomStarsView.swift */; };
+		598C30F122C73891001F95A6 /* CSMImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D822C73891001F95A6 /* CSMImage.swift */; };
+		598C30F222C73891001F95A6 /* CSMJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30D922C73891001F95A6 /* CSMJSON.swift */; };
+		598C30F322C73891001F95A6 /* CSMCircularInfinityCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30DA22C73891001F95A6 /* CSMCircularInfinityCollectionView.swift */; };
+		598C30F422C73891001F95A6 /* CSMAutomaticStatusBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30DB22C73891001F95A6 /* CSMAutomaticStatusBarColor.swift */; };
+		598C30F522C73891001F95A6 /* CSMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30DC22C73891001F95A6 /* CSMTextField.swift */; };
+		598C30F622C73891001F95A6 /* CSMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30DD22C73891001F95A6 /* CSMButton.swift */; };
+		598C30F722C73891001F95A6 /* CSMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30DE22C73891001F95A6 /* CSMTableView.swift */; };
+		598C30F822C73891001F95A6 /* CSMImageDownloaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30DF22C73891001F95A6 /* CSMImageDownloaded.swift */; };
+		598C30F922C73891001F95A6 /* CSMSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E022C73891001F95A6 /* CSMSwitch.swift */; };
+		598C30FA22C73891001F95A6 /* CSMLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E122C73891001F95A6 /* CSMLocationManager.swift */; };
+		598C30FB22C73891001F95A6 /* CSMUserAlters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E222C73891001F95A6 /* CSMUserAlters.swift */; };
+		598C30FC22C73891001F95A6 /* CSMWebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E322C73891001F95A6 /* CSMWebServiceManager.swift */; };
+		598C30FD22C73891001F95A6 /* CSMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E422C73891001F95A6 /* CSMImageView.swift */; };
+		598C30FE22C73891001F95A6 /* CSMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E522C73891001F95A6 /* CSMView.swift */; };
+		598C30FF22C73891001F95A6 /* CSMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C30E622C73891001F95A6 /* CSMString.swift */; };
+		598C310122C7390B001F95A6 /* PinterestUserLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C310022C7390B001F95A6 /* PinterestUserLayout.swift */; };
+		598C310322C73A5D001F95A6 /* FeedWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C310222C73A5D001F95A6 /* FeedWS.swift */; };
+		598C310522C73A7E001F95A6 /* FeedBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C310422C73A7E001F95A6 /* FeedBE.swift */; };
+		598C310722C74D09001F95A6 /* FeedBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C310622C74D09001F95A6 /* FeedBL.swift */; };
+		598C310922C75623001F95A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598C310822C75623001F95A6 /* Main.storyboard */; };
+		598C310D22C75860001F95A6 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C310C22C75860001F95A6 /* FeedListViewController.swift */; };
+		598C310F22C75886001F95A6 /* FeedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C310E22C75886001F95A6 /* FeedItemCollectionViewCell.swift */; };
+		598C311122C81F4C001F95A6 /* UserBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C311022C81F4C001F95A6 /* UserBE.swift */; };
+		598C311422C85839001F95A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598C311322C85839001F95A6 /* Login.storyboard */; };
+		598C311622C85909001F95A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C311522C85909001F95A6 /* LoginViewController.swift */; };
+		598C311822C85917001F95A6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C311722C85917001F95A6 /* RegisterViewController.swift */; };
+		598C311E22C86388001F95A6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C311D22C86388001F95A6 /* ImagePicker.swift */; };
+		598C312022C86A83001F95A6 /* UserWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C311F22C86A83001F95A6 /* UserWS.swift */; };
+		598C312222C86FF9001F95A6 /* UserBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C312122C86FF9001F95A6 /* UserBL.swift */; };
+		598CC81622C9773D0075324A /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81522C9773D0075324A /* UserAccountViewController.swift */; };
+		598CC81822C986970075324A /* FeedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81722C986970075324A /* FeedUserViewController.swift */; };
+		598CC81A22C9901F0075324A /* PinterestFeedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81922C9901E0075324A /* PinterestFeedLayout.swift */; };
+		598CC81C22C992120075324A /* FeedUserItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81B22C992120075324A /* FeedUserItemCollectionViewCell.swift */; };
+		598CC81E22C996A90075324A /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81D22C996A90075324A /* UpdateUserViewController.swift */; };
+		598CC82022C996BD0075324A /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81F22C996BD0075324A /* UpdatePasswordViewController.swift */; };
+		598CC82422C996E90075324A /* DetailsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC82322C996E90075324A /* DetailsFeedViewController.swift */; };
+		598CC82622C9978F0075324A /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC82522C9978F0075324A /* AddFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		598C307B22C73698001F95A6 /* Pinterest-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinterest-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598C307E22C73698001F95A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		598C308022C73698001F95A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		598C308322C73698001F95A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598C308522C73699001F95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598C308822C73699001F95A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598C308A22C73699001F95A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		598C30CE22C73891001F95A6 /* CSMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMTextView.swift; sourceTree = "<group>"; };
+		598C30CF22C73891001F95A6 /* CSMLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMLocalAuthentication.swift; sourceTree = "<group>"; };
+		598C30D022C73891001F95A6 /* CSMLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMLabel.swift; sourceTree = "<group>"; };
+		598C30D122C73891001F95A6 /* CSMDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMDateManager.swift; sourceTree = "<group>"; };
+		598C30D222C73891001F95A6 /* CSMColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMColorManager.swift; sourceTree = "<group>"; };
+		598C30D322C73891001F95A6 /* CSMNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMNumber.swift; sourceTree = "<group>"; };
+		598C30D422C73891001F95A6 /* CSMKeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMKeyChain.swift; sourceTree = "<group>"; };
+		598C30D522C73891001F95A6 /* CSMLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMLocalNotificationManager.swift; sourceTree = "<group>"; };
+		598C30D622C73891001F95A6 /* CSMSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMSearchBar.swift; sourceTree = "<group>"; };
+		598C30D722C73891001F95A6 /* CSMCustomStarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMCustomStarsView.swift; sourceTree = "<group>"; };
+		598C30D822C73891001F95A6 /* CSMImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMImage.swift; sourceTree = "<group>"; };
+		598C30D922C73891001F95A6 /* CSMJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMJSON.swift; sourceTree = "<group>"; };
+		598C30DA22C73891001F95A6 /* CSMCircularInfinityCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMCircularInfinityCollectionView.swift; sourceTree = "<group>"; };
+		598C30DB22C73891001F95A6 /* CSMAutomaticStatusBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMAutomaticStatusBarColor.swift; sourceTree = "<group>"; };
+		598C30DC22C73891001F95A6 /* CSMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMTextField.swift; sourceTree = "<group>"; };
+		598C30DD22C73891001F95A6 /* CSMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMButton.swift; sourceTree = "<group>"; };
+		598C30DE22C73891001F95A6 /* CSMTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMTableView.swift; sourceTree = "<group>"; };
+		598C30DF22C73891001F95A6 /* CSMImageDownloaded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMImageDownloaded.swift; sourceTree = "<group>"; };
+		598C30E022C73891001F95A6 /* CSMSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMSwitch.swift; sourceTree = "<group>"; };
+		598C30E122C73891001F95A6 /* CSMLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMLocationManager.swift; sourceTree = "<group>"; };
+		598C30E222C73891001F95A6 /* CSMUserAlters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMUserAlters.swift; sourceTree = "<group>"; };
+		598C30E322C73891001F95A6 /* CSMWebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMWebServiceManager.swift; sourceTree = "<group>"; };
+		598C30E422C73891001F95A6 /* CSMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMImageView.swift; sourceTree = "<group>"; };
+		598C30E522C73891001F95A6 /* CSMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMView.swift; sourceTree = "<group>"; };
+		598C30E622C73891001F95A6 /* CSMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMString.swift; sourceTree = "<group>"; };
+		598C310022C7390B001F95A6 /* PinterestUserLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestUserLayout.swift; sourceTree = "<group>"; };
+		598C310222C73A5D001F95A6 /* FeedWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWS.swift; sourceTree = "<group>"; };
+		598C310422C73A7E001F95A6 /* FeedBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBE.swift; sourceTree = "<group>"; };
+		598C310622C74D09001F95A6 /* FeedBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBL.swift; sourceTree = "<group>"; };
+		598C310822C75623001F95A6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		598C310C22C75860001F95A6 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
+		598C310E22C75886001F95A6 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		598C311022C81F4C001F95A6 /* UserBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBE.swift; sourceTree = "<group>"; };
+		598C311322C85839001F95A6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		598C311522C85909001F95A6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		598C311722C85917001F95A6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		598C311D22C86388001F95A6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		598C311F22C86A83001F95A6 /* UserWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWS.swift; sourceTree = "<group>"; };
+		598C312122C86FF9001F95A6 /* UserBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBL.swift; sourceTree = "<group>"; };
+		598CC81522C9773D0075324A /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		598CC81722C986970075324A /* FeedUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUserViewController.swift; sourceTree = "<group>"; };
+		598CC81922C9901E0075324A /* PinterestFeedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestFeedLayout.swift; sourceTree = "<group>"; };
+		598CC81B22C992120075324A /* FeedUserItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUserItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		598CC81D22C996A90075324A /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
+		598CC81F22C996BD0075324A /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		598CC82322C996E90075324A /* DetailsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFeedViewController.swift; sourceTree = "<group>"; };
+		598CC82522C9978F0075324A /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +145,138 @@
 			isa = PBXGroup;
 			children = (
 				598C307E22C73698001F95A6 /* AppDelegate.swift */,
-				598C308022C73698001F95A6 /* ViewController.swift */,
-				598C308222C73698001F95A6 /* Main.storyboard */,
+				598C309022C736E2001F95A6 /* Controllers */,
+				598C309722C73765001F95A6 /* Entities */,
+				598C309822C73773001F95A6 /* Web Services */,
+				598C309922C73782001F95A6 /* Logic */,
+				598C309622C7375D001F95A6 /* Support Files */,
+				598C30CD22C73891001F95A6 /* CSM */,
+				598C311222C85812001F95A6 /* Views */,
 				598C308522C73699001F95A6 /* Assets.xcassets */,
 				598C308722C73699001F95A6 /* LaunchScreen.storyboard */,
 				598C308A22C73699001F95A6 /* Info.plist */,
 			);
 			path = "Pinterest-2.0";
+			sourceTree = "<group>";
+		};
+		598C309022C736E2001F95A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				598C309322C7370C001F95A6 /* Feed */,
+				598C309222C73702001F95A6 /* User */,
+				598C309122C736F7001F95A6 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		598C309122C736F7001F95A6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				598C311522C85909001F95A6 /* LoginViewController.swift */,
+				598C311722C85917001F95A6 /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		598C309222C73702001F95A6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				598CC81522C9773D0075324A /* UserAccountViewController.swift */,
+				598CC81D22C996A90075324A /* UpdateUserViewController.swift */,
+				598CC81F22C996BD0075324A /* UpdatePasswordViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		598C309322C7370C001F95A6 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				598C310C22C75860001F95A6 /* FeedListViewController.swift */,
+				598C310E22C75886001F95A6 /* FeedItemCollectionViewCell.swift */,
+				598CC81722C986970075324A /* FeedUserViewController.swift */,
+				598CC81B22C992120075324A /* FeedUserItemCollectionViewCell.swift */,
+				598CC82322C996E90075324A /* DetailsFeedViewController.swift */,
+				598CC82522C9978F0075324A /* AddFeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		598C309622C7375D001F95A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				598CC81922C9901E0075324A /* PinterestFeedLayout.swift */,
+				598C310022C7390B001F95A6 /* PinterestUserLayout.swift */,
+				598C311D22C86388001F95A6 /* ImagePicker.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		598C309722C73765001F95A6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				598C310422C73A7E001F95A6 /* FeedBE.swift */,
+				598C311022C81F4C001F95A6 /* UserBE.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		598C309822C73773001F95A6 /* Web Services */ = {
+			isa = PBXGroup;
+			children = (
+				598C310222C73A5D001F95A6 /* FeedWS.swift */,
+				598C311F22C86A83001F95A6 /* UserWS.swift */,
+			);
+			path = "Web Services";
+			sourceTree = "<group>";
+		};
+		598C309922C73782001F95A6 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				598C310622C74D09001F95A6 /* FeedBL.swift */,
+				598C312122C86FF9001F95A6 /* UserBL.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		598C30CD22C73891001F95A6 /* CSM */ = {
+			isa = PBXGroup;
+			children = (
+				598C30CE22C73891001F95A6 /* CSMTextView.swift */,
+				598C30CF22C73891001F95A6 /* CSMLocalAuthentication.swift */,
+				598C30D022C73891001F95A6 /* CSMLabel.swift */,
+				598C30D122C73891001F95A6 /* CSMDateManager.swift */,
+				598C30D222C73891001F95A6 /* CSMColorManager.swift */,
+				598C30D322C73891001F95A6 /* CSMNumber.swift */,
+				598C30D422C73891001F95A6 /* CSMKeyChain.swift */,
+				598C30D522C73891001F95A6 /* CSMLocalNotificationManager.swift */,
+				598C30D622C73891001F95A6 /* CSMSearchBar.swift */,
+				598C30D722C73891001F95A6 /* CSMCustomStarsView.swift */,
+				598C30D822C73891001F95A6 /* CSMImage.swift */,
+				598C30D922C73891001F95A6 /* CSMJSON.swift */,
+				598C30DA22C73891001F95A6 /* CSMCircularInfinityCollectionView.swift */,
+				598C30DB22C73891001F95A6 /* CSMAutomaticStatusBarColor.swift */,
+				598C30DC22C73891001F95A6 /* CSMTextField.swift */,
+				598C30DD22C73891001F95A6 /* CSMButton.swift */,
+				598C30DE22C73891001F95A6 /* CSMTableView.swift */,
+				598C30DF22C73891001F95A6 /* CSMImageDownloaded.swift */,
+				598C30E022C73891001F95A6 /* CSMSwitch.swift */,
+				598C30E122C73891001F95A6 /* CSMLocationManager.swift */,
+				598C30E222C73891001F95A6 /* CSMUserAlters.swift */,
+				598C30E322C73891001F95A6 /* CSMWebServiceManager.swift */,
+				598C30E422C73891001F95A6 /* CSMImageView.swift */,
+				598C30E522C73891001F95A6 /* CSMView.swift */,
+				598C30E622C73891001F95A6 /* CSMString.swift */,
+			);
+			path = CSM;
+			sourceTree = "<group>";
+		};
+		598C311222C85812001F95A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				598C310822C75623001F95A6 /* Main.storyboard */,
+				598C311322C85839001F95A6 /* Login.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +337,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598C311422C85839001F95A6 /* Login.storyboard in Resources */,
+				598C310922C75623001F95A6 /* Main.storyboard in Resources */,
 				598C308922C73699001F95A6 /* LaunchScreen.storyboard in Resources */,
 				598C308622C73699001F95A6 /* Assets.xcassets in Resources */,
-				598C308422C73698001F95A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +351,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598C308122C73698001F95A6 /* ViewController.swift in Sources */,
+				598C30EE22C73891001F95A6 /* CSMLocalNotificationManager.swift in Sources */,
+				598CC82622C9978F0075324A /* AddFeedViewController.swift in Sources */,
+				598C310D22C75860001F95A6 /* FeedListViewController.swift in Sources */,
+				598C30E922C73891001F95A6 /* CSMLabel.swift in Sources */,
+				598CC81E22C996A90075324A /* UpdateUserViewController.swift in Sources */,
+				598C310522C73A7E001F95A6 /* FeedBE.swift in Sources */,
 				598C307F22C73698001F95A6 /* AppDelegate.swift in Sources */,
+				598C30F222C73891001F95A6 /* CSMJSON.swift in Sources */,
+				598C30FC22C73891001F95A6 /* CSMWebServiceManager.swift in Sources */,
+				598CC81A22C9901F0075324A /* PinterestFeedLayout.swift in Sources */,
+				598C30E822C73891001F95A6 /* CSMLocalAuthentication.swift in Sources */,
+				598CC82022C996BD0075324A /* UpdatePasswordViewController.swift in Sources */,
+				598C312022C86A83001F95A6 /* UserWS.swift in Sources */,
+				598C30F322C73891001F95A6 /* CSMCircularInfinityCollectionView.swift in Sources */,
+				598C30F422C73891001F95A6 /* CSMAutomaticStatusBarColor.swift in Sources */,
+				598C310F22C75886001F95A6 /* FeedItemCollectionViewCell.swift in Sources */,
+				598C30F822C73891001F95A6 /* CSMImageDownloaded.swift in Sources */,
+				598C30FA22C73891001F95A6 /* CSMLocationManager.swift in Sources */,
+				598C30F722C73891001F95A6 /* CSMTableView.swift in Sources */,
+				598C30ED22C73891001F95A6 /* CSMKeyChain.swift in Sources */,
+				598C30EB22C73891001F95A6 /* CSMColorManager.swift in Sources */,
+				598C311822C85917001F95A6 /* RegisterViewController.swift in Sources */,
+				598C310322C73A5D001F95A6 /* FeedWS.swift in Sources */,
+				598C30F522C73891001F95A6 /* CSMTextField.swift in Sources */,
+				598CC81622C9773D0075324A /* UserAccountViewController.swift in Sources */,
+				598C30FD22C73891001F95A6 /* CSMImageView.swift in Sources */,
+				598C310722C74D09001F95A6 /* FeedBL.swift in Sources */,
+				598C311E22C86388001F95A6 /* ImagePicker.swift in Sources */,
+				598C310122C7390B001F95A6 /* PinterestUserLayout.swift in Sources */,
+				598CC82422C996E90075324A /* DetailsFeedViewController.swift in Sources */,
+				598CC81822C986970075324A /* FeedUserViewController.swift in Sources */,
+				598C30E722C73891001F95A6 /* CSMTextView.swift in Sources */,
+				598C30EC22C73891001F95A6 /* CSMNumber.swift in Sources */,
+				598C30FB22C73891001F95A6 /* CSMUserAlters.swift in Sources */,
+				598C30EA22C73891001F95A6 /* CSMDateManager.swift in Sources */,
+				598C30F922C73891001F95A6 /* CSMSwitch.swift in Sources */,
+				598C30F622C73891001F95A6 /* CSMButton.swift in Sources */,
+				598C312222C86FF9001F95A6 /* UserBL.swift in Sources */,
+				598CC81C22C992120075324A /* FeedUserItemCollectionViewCell.swift in Sources */,
+				598C30F022C73891001F95A6 /* CSMCustomStarsView.swift in Sources */,
+				598C30FF22C73891001F95A6 /* CSMString.swift in Sources */,
+				598C30FE22C73891001F95A6 /* CSMView.swift in Sources */,
+				598C311622C85909001F95A6 /* LoginViewController.swift in Sources */,
+				598C311122C81F4C001F95A6 /* UserBE.swift in Sources */,
+				598C30EF22C73891001F95A6 /* CSMSearchBar.swift in Sources */,
+				598C30F122C73891001F95A6 /* CSMImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		598C308222C73698001F95A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				598C308322C73698001F95A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		598C308722C73699001F95A6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,7 +542,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Peruvianwit.Pinterest-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -307,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Peruvianwit.Pinterest-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
