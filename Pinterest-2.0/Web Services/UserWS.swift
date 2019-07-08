@@ -9,7 +9,6 @@
 import UIKit
 
 class UserWS: NSObject {
-    typealias SuccessArr = (_ array: [UserBE], _ message: String) -> Void
     typealias SuccessRes = (_ response: UserBE, _ message: String) -> Void
     typealias SuccessStr = (_ response: String, _ message: String) -> Void
     typealias Success = (_ message: String) -> Void

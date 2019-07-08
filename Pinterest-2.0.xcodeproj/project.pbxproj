@@ -57,6 +57,8 @@
 		598CC82022C996BD0075324A /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC81F22C996BD0075324A /* UpdatePasswordViewController.swift */; };
 		598CC82422C996E90075324A /* DetailsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC82322C996E90075324A /* DetailsFeedViewController.swift */; };
 		598CC82622C9978F0075324A /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598CC82522C9978F0075324A /* AddFeedViewController.swift */; };
+		59D5D4A122D326DD00ACCB31 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5D4A022D326DD00ACCB31 /* SplashViewController.swift */; };
+		59D5D4A422D3299500ACCB31 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5D4A322D3299500ACCB31 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,8 @@
 		598CC81F22C996BD0075324A /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
 		598CC82322C996E90075324A /* DetailsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFeedViewController.swift; sourceTree = "<group>"; };
 		598CC82522C9978F0075324A /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
+		59D5D4A022D326DD00ACCB31 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = "../../../../../Downloads/Isil_2.0-master/Pinterest-2.0/Controllers/Login/SplashViewController.swift"; sourceTree = "<group>"; };
+		59D5D4A322D3299500ACCB31 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 		598C309022C736E2001F95A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				59D5D4A222D3292800ACCB31 /* Tab Bar */,
 				598C309322C7370C001F95A6 /* Feed */,
 				598C309222C73702001F95A6 /* User */,
 				598C309122C736F7001F95A6 /* Login */,
@@ -172,6 +177,7 @@
 		598C309122C736F7001F95A6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				59D5D4A022D326DD00ACCB31 /* SplashViewController.swift */,
 				598C311522C85909001F95A6 /* LoginViewController.swift */,
 				598C311722C85917001F95A6 /* RegisterViewController.swift */,
 			);
@@ -279,6 +285,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		59D5D4A222D3292800ACCB31 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				59D5D4A322D3299500ACCB31 /* TabBarViewController.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +381,7 @@
 				598C30F322C73891001F95A6 /* CSMCircularInfinityCollectionView.swift in Sources */,
 				598C30F422C73891001F95A6 /* CSMAutomaticStatusBarColor.swift in Sources */,
 				598C310F22C75886001F95A6 /* FeedItemCollectionViewCell.swift in Sources */,
+				59D5D4A422D3299500ACCB31 /* TabBarViewController.swift in Sources */,
 				598C30F822C73891001F95A6 /* CSMImageDownloaded.swift in Sources */,
 				598C30FA22C73891001F95A6 /* CSMLocationManager.swift in Sources */,
 				598C30F722C73891001F95A6 /* CSMTableView.swift in Sources */,
@@ -392,6 +407,7 @@
 				598CC81C22C992120075324A /* FeedUserItemCollectionViewCell.swift in Sources */,
 				598C30F022C73891001F95A6 /* CSMCustomStarsView.swift in Sources */,
 				598C30FF22C73891001F95A6 /* CSMString.swift in Sources */,
+				59D5D4A122D326DD00ACCB31 /* SplashViewController.swift in Sources */,
 				598C30FE22C73891001F95A6 /* CSMView.swift in Sources */,
 				598C311622C85909001F95A6 /* LoginViewController.swift in Sources */,
 				598C311122C81F4C001F95A6 /* UserBE.swift in Sources */,

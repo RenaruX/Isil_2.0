@@ -49,6 +49,7 @@ extension FeedListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "DetailsFeedViewController", sender: indexPath)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,7 +66,7 @@ extension FeedListViewController: FeedItemCellDelegate{
         let currentUser = UserDefaults.standard.value(forKey: "session") as! [String : Any]
         let indexOfFeed = self.arrFeed.firstIndex(of: cell.objectFeed) ?? -1
         if(!cell.objectFeed.liked_by_user){
-            FeedBL.setLike(id: cell.objectFeed.feed_id, user: currentUser["user_id"] as! Int, { (message) in
+            FeedBL.setLike(id: cell.objectFeed.feed_id, user: currentUser["user_id"] as? Int, { (message) in
                 self.arrFeed[indexOfFeed].feed_likes += 1
                 self.arrFeed[indexOfFeed].liked_by_user = true
                 self.clvFeed.reloadSections(IndexSet(integer: 0))
@@ -74,7 +75,7 @@ extension FeedListViewController: FeedItemCellDelegate{
             }
         }
         else{
-            FeedBL.removeLike(id: cell.objectFeed.feed_id, user: currentUser["user_id"] as! Int, { (message) in
+            FeedBL.removeLike(id: cell.objectFeed.feed_id, user: currentUser["user_id"] as? Int, { (message) in
                 self.arrFeed[indexOfFeed].feed_likes -= 1
                 self.arrFeed[indexOfFeed].liked_by_user = false
                 self.clvFeed.reloadSections(IndexSet(integer: 0))

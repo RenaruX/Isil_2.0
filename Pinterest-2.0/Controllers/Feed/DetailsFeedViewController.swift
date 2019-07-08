@@ -18,6 +18,10 @@ class DetailsFeedViewController: UIViewController {
     
     var objectFeed = FeedBE()
     
+    @IBAction func clickBtnBack(_ sender: Any){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let formatter = DateFormatter()

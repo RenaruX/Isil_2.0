@@ -13,6 +13,7 @@ class FeedUserViewController: UIViewController {
     
     var arrFeed = [FeedBE]()
     var objectUser = UserBE()
+    var newFeed = FeedBE()
     
     private func getFeed(){
         FeedBL.getUserFeed(user: self.objectUser.user_id, { (feed, message) in
@@ -33,6 +34,13 @@ class FeedUserViewController: UIViewController {
         self.objectUser = UserBE.object(UserDefaults.standard.value(forKey: "session") as! [String : Any])
         self.getFeed()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddFeedViewController"{
+            let add = segue.destination as! AddFeedViewController
+            add.delegate = self
+        }
+    }
 }
 
 extension FeedUserViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -52,5 +60,13 @@ extension FeedUserViewController: PinterestUserLayoutDelegate{
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
         let ratioHeight = (collectionView.frame.width / 2.12) * arrFeed[indexPath.row].feed_img_height / arrFeed[indexPath.row].feed_img_width
         return ratioHeight
+    }
+}
+
+extension FeedUserViewController: FeedAddDelegate{
+    func reload(_ object: FeedBE) {
+        self.newFeed = object
+        self.arrFeed.append(object)
+        self.clvFeed.reloadData()
     }
 }

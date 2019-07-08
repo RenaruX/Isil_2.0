@@ -12,6 +12,7 @@ class UpdateUserViewController: UIViewController {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtNick: UITextField!
     @IBOutlet weak var txtMail: UITextField!
+    @IBOutlet weak var loadingUser : UIActivityIndicatorView!
     
     var objectUser = UserBE()
     override func viewDidLoad() {
@@ -22,12 +23,22 @@ class UpdateUserViewController: UIViewController {
         self.txtMail.text = self.objectUser.user_mail
     }
     
+    @IBAction func clickBtnBack(_ sender: Any){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func btnUpdate(_ sender: UIButton) {
         sender.isEnabled = false
-        UserBL.updateUser(id:self.objectUser.user_id, name: self.txtName.text ?? "", nick: self.txtNick.text ?? "", mail: self.txtMail.text ?? "", { (message) in
+        self.loadingUser.startAnimating()
+        UserBL.updateUser(id:self.objectUser.user_id, name: self.txtName.text, nick: self.txtNick.text, mail: self.txtMail.text, { (message) in
+            sender.isEnabled = true
+            self.loadingUser.stopAnimating()
             self.navigationController?.popViewController(animated: true)
         }) { (message) in
-            self.showAltert(withTitle: "ERROR", withMessage: message, withAcceptButton: "ok", withCompletion: {sender.isEnabled = true})
+            self.showAltert(withTitle: "ERROR", withMessage: message, withAcceptButton: "ok", withCompletion: {
+                sender.isEnabled = true
+                self.loadingUser.stopAnimating()
+            })
         }
     }
     

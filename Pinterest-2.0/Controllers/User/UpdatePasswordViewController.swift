@@ -11,6 +11,7 @@ import UIKit
 class UpdatePasswordViewController: UIViewController {
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtNewPass: UITextField!
+    @IBOutlet weak var loadingPass : UIActivityIndicatorView!
     
     var objectUser = UserBE()
     override func viewDidLoad() {
@@ -18,16 +19,25 @@ class UpdatePasswordViewController: UIViewController {
         self.objectUser = UserBE.object(UserDefaults.standard.value(forKey: "session") as! [String : Any])
     }
     
+    @IBAction func clickBtnBack(_ sender: Any){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func btnUpdate(_ sender: UIButton) {
         sender.isEnabled = false
-        UserBL.updatePassUser(id: self.objectUser.user_id, oldPass: self.txtPass.text ?? "", newPass: self.txtNewPass.text ?? "", { (message) in
-            self.showAltert(withTitle: message, withMessage: "Por favor vuelva a iniciar sesion", withAcceptButton: "ok", withCompletion: {
-                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "login") as UIViewController
-                self.show(vc, sender: self)
+        self.loadingPass.startAnimating()
+        UserBL.updatePassUser(id: self.objectUser.user_id, oldPass: self.txtPass.text, newPass: self.txtNewPass.text, { (message) in
+            self.showAltert(withTitle: message, withMessage: "Por favor vuelve a iniciar sesion", withAcceptButton: "ok", withCompletion: {
+                sender.isEnabled = true
+                self.loadingPass.stopAnimating()
+                UserDefaults.standard.removeObject(forKey: "session")
+                self.navigationController?.popToRootViewController(animated: true)
             })
         }) { (message) in
-            self.showAltert(withTitle: "ERROR", withMessage: message, withAcceptButton: "ok", withCompletion: {sender.isEnabled = true})
+            self.showAltert(withTitle: "ERROR", withMessage: message, withAcceptButton: "ok", withCompletion: {
+                sender.isEnabled = true
+                self.loadingPass.stopAnimating()
+            })
         }
     }
 

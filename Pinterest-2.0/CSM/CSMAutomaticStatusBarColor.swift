@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIViewController {
     
-    public func classNameAsString() -> String {
+    func classNameAsString() -> String {
         return String(describing: type(of: self))
     }
     

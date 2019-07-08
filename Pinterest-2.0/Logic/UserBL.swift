@@ -9,12 +9,20 @@
 import UIKit
 
 class UserBL: NSObject {
-    typealias SuccessArr = (_ array: [UserBE], _ message: String) -> Void
-    typealias SuccessRes = (_ response: UserBE, _ message: String) -> Void
     typealias Success = (_ message: String) -> Void
     typealias Error = (_ message: String) -> Void
     
-    class func loginUser(nick: String, password: String, _ success: @escaping Success, _ fail: @escaping Error){
+    class func loginUser(nick: String?, password: String?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let nick = nick, nick.trim().count != 0 else {
+            fail("Ingresa un nombre de usuario")
+            return
+        }
+        
+        guard let password = password, password.trim().count != 0 else {
+            fail("Ingresa una contrasena")
+            return
+        }
+        
         UserWS.loginUser(nick: nick, password: password, { (user, message) in
             let dictionary = UserBE.dictionary(user)
             UserDefaults.standard.set(dictionary, forKey: "session")
@@ -24,7 +32,32 @@ class UserBL: NSObject {
         }
     }
     
-    class func registerUser(name: String, mail: String, nick: String, password: String, img: UIImage, _ success: @escaping Success, _ fail: @escaping Error){
+    class func registerUser(name: String?, mail: String?, nick: String?, password: String?, img: UIImage?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let name = name, name.trim().count != 0 else {
+            fail("Ingresa un nombre")
+            return
+        }
+        
+        guard let mail = mail, mail.trim().count != 0 else {
+            fail("Ingresa un correo electronico")
+            return
+        }
+        
+        guard let nick = nick, nick.trim().count != 0 else {
+            fail("Ingresa un nombre de usuario")
+            return
+        }
+        
+        guard let password = password, password.trim().count != 0 else {
+            fail("Ingresa una contrasena")
+            return
+        }
+        
+        guard let img = img else {
+            fail("Ingresa una imagen")
+            return
+        }
+        
         UserWS.setUser(name: name, mail: mail, nick: nick, password: password, img: img, { (user, message) in
             let dictionary = UserBE.dictionary(user)
             UserDefaults.standard.set(dictionary, forKey: "session")
@@ -34,7 +67,27 @@ class UserBL: NSObject {
         }
     }
     
-    class func updateUser(id: Int, name: String, nick: String, mail: String, _ success: @escaping Success, _ fail: @escaping Error){
+    class func updateUser(id: Int?, name: String?, nick: String?, mail: String?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let id = id, id != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
+        guard let mail = mail, mail.trim().count != 0 else {
+            fail("Ingresa un correo electronico")
+            return
+        }
+        
+        guard let nick = nick, nick.trim().count != 0 else {
+            fail("Ingresa un nombre de usuario")
+            return
+        }
+        
+        guard let name = name, name.trim().count != 0 else {
+            fail("Ingresa un nombre")
+            return
+        }
+        
         UserWS.updateUser(id: id, name: name, nick: nick, mail: mail, { (message) in
             let object = UserBE.object(UserDefaults.standard.value(forKey: "session") as! [String : Any])
             object.user_name = name
@@ -48,7 +101,17 @@ class UserBL: NSObject {
         }
     }
     
-    class func updateImgUser(id: Int, img: UIImage, _ success: @escaping Success, _ fail: @escaping Error){
+    class func updateImgUser(id: Int?, img: UIImage?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let id = id, id != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
+        guard let img = img else {
+            fail("Ingresa una imagen")
+            return
+        }
+        
         UserWS.updateImgUser(id: id, img: img, { (url, message) in
             let object = UserBE.object(UserDefaults.standard.value(forKey: "session") as! [String : Any])
             object.user_url = "https://peruvianwit.com/api/\(url)"
@@ -60,7 +123,22 @@ class UserBL: NSObject {
         }
     }
     
-    class func updatePassUser(id: Int, oldPass: String, newPass: String, _ success: @escaping Success, _ fail: @escaping Error){
+    class func updatePassUser(id: Int?, oldPass: String?, newPass: String?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let id = id, id != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
+        guard let oldPass = oldPass, oldPass.trim().count != 0 else {
+            fail("Ingresa tu antigua contrasena")
+            return
+        }
+        
+        guard let newPass = newPass, newPass.trim().count != 0 else {
+            fail("Ingresa tu nueva contrasena")
+            return
+        }
+        
         UserWS.updatePassUser(id: id, oldPass: oldPass, newPass: newPass, { (message) in
             UserDefaults.standard.removeObject(forKey: "session")
             success(message)

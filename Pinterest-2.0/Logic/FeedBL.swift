@@ -22,7 +22,12 @@ class FeedBL: NSObject {
         }
     }
     
-    class func getUserFeed(user: Int, _ success: @escaping SuccessArr, _ fail: @escaping Error){
+    class func getUserFeed(user: Int?, _ success: @escaping SuccessArr, _ fail: @escaping Error){
+        guard let user = user, user != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
         FeedWS.getUserFeed(user: user, { (arrFeed, message) in
             success(arrFeed, message)
         }) { (message) in
@@ -30,7 +35,17 @@ class FeedBL: NSObject {
         }
     }
     
-    class func setLike(id: Int, user: Int, _ success: @escaping Success, _ fail: @escaping Error){
+    class func setLike(id: Int?, user: Int?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let id = id, id != 0 else {
+            fail("ID de feed erroneo")
+            return
+        }
+        
+        guard let user = user, user != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
         FeedWS.setLike(id: id, user: user, { (message) in
             success(message)
         }) { (message) in
@@ -38,7 +53,17 @@ class FeedBL: NSObject {
         }
     }
     
-    class func removeLike(id: Int, user: Int, _ success: @escaping Success, _ fail: @escaping Error){
+    class func removeLike(id: Int?, user: Int?, _ success: @escaping Success, _ fail: @escaping Error){
+        guard let id = id, id != 0 else {
+            fail("ID de feed erroneo")
+            return
+        }
+        
+        guard let user = user, user != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
         FeedWS.removeLike(id: id, user: user, { (message) in
             success(message)
         }) { (message) in
@@ -46,7 +71,27 @@ class FeedBL: NSObject {
         }
     }
     
-    class func setFeed(caption: String, description: String, user: Int, img: UIImage, _ success: @escaping SuccessRes, _ fail: @escaping Error){
+    class func setFeed(caption: String?, description: String?, user: Int?, img: UIImage?, _ success: @escaping SuccessRes, _ fail: @escaping Error){
+        guard let caption = caption, caption.trim().count != 0 else {
+            fail("Ingresa un titulo")
+            return
+        }
+        
+        guard let description = description, description.trim().count != 0 else {
+            fail("Ingresa una descripcion")
+            return
+        }
+        
+        guard let user = user, user != 0 else {
+            fail("ID de usuario erroneo")
+            return
+        }
+        
+        guard let img = img else {
+            fail("Ingresa una imagen")
+            return
+        }
+        
         FeedWS.setFeed(caption: caption, description: description, user: user, img: img, { (feed, message) in
             success(feed, message)
         }) { (message) in

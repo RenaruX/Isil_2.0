@@ -50,9 +50,7 @@ class UserAccountViewController: UIViewController {
     
     @IBAction func btnLogout(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: "session")
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "login") as UIViewController
-        self.show(vc, sender: self)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
@@ -60,7 +58,7 @@ class UserAccountViewController: UIViewController {
 extension UserAccountViewController: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         if(image != nil){
-            UserBL.updateImgUser(id: self.objectUser.user_id, img: image ?? UIImage(), { (message) in
+            UserBL.updateImgUser(id: self.objectUser.user_id, img: image, { (message) in
                 self.updateUser()
                 self.userImg.downloadImagenInUrl(self.objectUser.user_url, withPlaceHolderImage: nil) { (url, image) in
                     if url == self.objectUser.user_url {
